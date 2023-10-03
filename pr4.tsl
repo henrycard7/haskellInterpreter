@@ -1,0 +1,5 @@
+tile1 = Arg tile1.tl; ##this is an example comment to show that our language supports comments##
+tile2 = Arg tile2.tl;
+tile3 = Arg tile3.tl;
+output = ReplicateIf 50 [(Row + Column < 50 && Column < 25) = (And tile1 (Negate tile3)):(Row <= Column && Column >= 25) = (And tile2 (Negate tile3))];
+Return output;

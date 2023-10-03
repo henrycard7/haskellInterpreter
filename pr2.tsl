@@ -1,0 +1,13 @@
+tileTopLeft = Arg tile1.tl; ##this is an example comment to show that our language supports comments##
+tileTopRight = Rotate 90 tileTopLeft;
+tileBottomRight = Rotate 180 tileTopLeft;
+tileBottomLeft = Rotate 270 tileTopLeft;
+tileTop = Add Row tileTopLeft tileTopRight;
+tileBottom = Add Row tileBottomLeft tileBottomRight;
+tileMain = Add Column tileTop tileBottom;
+tileScaled = Scale 3 tileMain;
+topBottomRow = Replicate Relative Row 5 tileMain;
+leftRightColumn = Replicate Relative Column 3 tileMain;
+temp1 = Add Column topBottomRow (Add Row (Add Row leftRightColumn tileScaled) leftRightColumn);
+tileFinal = Add Column temp1 topBottomRow;
+Return tileFinal;

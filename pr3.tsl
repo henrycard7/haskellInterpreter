@@ -1,0 +1,13 @@
+tileInput = Arg tile1.tl; ##this is an example comment to show that our language supports comments##
+upperMiddle = Reflect Vertical tileInput;
+blank = Blank tileInput;
+bottomMiddle = Reflect Horizontal tileInput;
+bottomRight = Reflect Horizontal upperMiddle;
+temp1 = Add Row tileInput upperMiddle;
+temp3 = Add Row blank bottomMiddle;
+tileBase = Add Column (Add Row temp1 blank) (Add Row temp3 bottomRight);
+tileBaseReflected = Reflect Horizontal tileBase;
+temp5 = Add Row tileBase tileBaseReflected;
+temp6 = Replicate Relative Row 10 temp5;
+final = Replicate Relative Column 30 temp6;
+Return final;

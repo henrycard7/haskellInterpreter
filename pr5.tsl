@@ -1,0 +1,6 @@
+inputTile = Arg tile1.tl; ##this is an example comment to show that our language supports comments## 
+row1 = Replicate Relative Row 3 (Subtile (0,0) 6 inputTile);
+row2 = Replicate Relative Row 3 (Subtile (2,2) 6 inputTile);
+row3 = Replicate Relative Row 3 (Subtile (4,4) 6 inputTile);
+outputTile = Add Column (Add Column row1 row2) row3;
+Return outputTile;

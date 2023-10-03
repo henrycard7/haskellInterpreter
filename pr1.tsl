@@ -1,0 +1,7 @@
+tile1 = Arg tile1.tl; ##this is an example comment to show that our language supports comments## 
+tile2 = Arg tile2.tl;
+tile3 = Replicate Absolute Row 64 (Add Row tile1 tile2);
+tile4 = Reverse tile3;
+tile5 = Add Column tile3 tile4;
+tile6 = Replicate Absolute Column 64 tile5;
+Return tile6;
